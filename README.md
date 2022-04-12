@@ -1,5 +1,4 @@
 - 👋 Hi, I’m @PolysheepCodes
 - 👀 I’m interested in web development
-- 🌱 I’m currently learning HTML and CSS
-- 💞️ I’m looking to collaborate on C++
+- 🌱 I’m currently learning HTML, CSS, Javascript and C++
 - 💻 My Website https://polysheepcodes.github.io/PolysheepCodes/
