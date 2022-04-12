@@ -4,14 +4,25 @@ const height = canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'rgb(168, 42, 32,)';
 ctx.fillRect(0, 0, width, height);
-@Test
- public void getCoordinates() throws Exception {
-  //Locate element for which you wants to retrieve x y coordinates.
-       WebElement Image = driver.findElement(By.xpath("//img[@border='0']"));
-       //Used points class to get x and y coordinates of element.
-        Point classname = Image.getLocation();
-        int xcordi = classname.getX();
-        System.out.println("Element's Position from left side"+xcordi +" pixels.");
-        int ycordi = classname.getY();
-        System.out.println("Element's Position from top"+ycordi +" pixels.");
- }
+<script type="text/javascript">
+document.onmouseup=getXYPosition;
+</script>
+// Cursor coordinate functions
+var myX, myY, xyOn, myMouseX, myMouseY;
+xyOn = true;
+function getXYPosition(e){
+myMouseX=(e||event).clientX;
+myMouseY=(e||event).clientY;
+if (document.documentElement.scrollTop > 0) {
+myMouseY = myMouseY + document.documentElement.scrollTop;
+}
+if (xyOn) {
+alert("X is " + myMouseX + "\nY is " + myMouseY);
+}
+}
+function toggleXY() {
+xyOn = !xyOn;
+document.getElementById('xyLink').blur();
+return false;
+}
+<a href="#" id="xyLink" onfocus="toggleXY();" accesskey="z"></a>
